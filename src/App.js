@@ -1,24 +1,37 @@
+import React, { useState } from 'react'
 import logo from './logo.svg';
 import './App.css';
+import NoteArea from "./NoteArea";
+import NotesDisplay from "./NotesDisplay";
+import Search from './Search'
 
 function App() {
+  const [notes, setNotes] = useState([])
+
+  const uid = function(){
+    return Date.now().toString(36) + Math.random().toString(36).substr(2);
+  }
+
+  const createNote = (note)=>{
+    const newNote = {id: uid(), text: note}
+    setNotes([...notes, newNote])
+    
+  }
+
+  const deleteNote = (id) =>{
+    const filteredNotes = notes.filter((note)=>{
+      return note.id !== id
+    })
+
+    setNotes(filteredNotes)
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main className="App">
+      <NotesDisplay notes={notes} deleteNote={deleteNote}/>
+      <NoteArea createNote={createNote}/>
+      <Search notes={notes} deleteNote={deleteNote} />
+    </main>
   );
 }
 

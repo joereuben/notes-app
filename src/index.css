@@ -5,9 +5,78 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(15, 160, 80);
+  
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+h4{
+  margin: auto;
+}
+section{
+  text-align: center;
+  background-color: white;
+  border-radius: 5px;
+  padding: 20px 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  align-self: flex-start;
+}
+
+form{
+  margin-top: auto;
+}
+
+input, textarea{
+  padding: 5px;
+  border: 3px solid rgb(243, 240, 240);
+  /* height: 30px; */
+}
+input[type=text]:focus, textarea:focus {
+  outline: none;
+  border: 3px solid rgb(202, 198, 198);
+}
+
+.button{
+  padding: 5px;
+  border: none;
+  height: 31px;
+  background-color: rgb(15, 160, 80);
+  color: white;
+  cursor: pointer;
+  min-width: 50px;
+  transition-duration: .2s;
+}
+
+.button:hover{
+  box-shadow: 3px 3px 3px rgb(218, 217, 217);
+}
+
+.note_container, form{
+  margin-top: 10px;
+}
+
+.note_box{
+  text-align: start;
+  display: grid;
+  grid-template-columns: 80% auto;
+  padding: 10px 0px;
+  border-bottom: 1px solid rgb(212, 210, 210);
+}
+
+.delete_box{
+  text-align: center;
+}
+
+.delete_btn{
+  background-color: red;
+}
+
+.note_text{
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  color: rgb(4, 161, 83);
 }
