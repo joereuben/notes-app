@@ -34,6 +34,7 @@ input, textarea{
   padding: 5px;
   border: 3px solid rgb(243, 240, 240);
   /* height: 30px; */
+  resize: none;
 }
 input[type=text]:focus, textarea:focus {
   outline: none;
@@ -76,7 +77,15 @@ input[type=text]:focus, textarea:focus {
 }
 
 .note_text{
-  letter-spacing: 1px;
+  /* letter-spacing: 1px; */
   text-transform: capitalize;
   color: rgb(4, 161, 83);
+}
+
+.note_text_toggle_btn{
+  background: none;
+  border: none;
+  color: rgb(133, 133, 245);
+  cursor: pointer;
+  font-size: 11px;
 }
