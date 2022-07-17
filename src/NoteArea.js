@@ -17,8 +17,12 @@ export default function NoteArea({createNote}) {
     <section>
         <h4>Create Your Note</h4>
         <form action='' method='get' onSubmit={handleSubmit}>
-            <input type="text" ref={inputRef} onChange={(e) => setNote(e.target.value)}/>
-            <button type='submit' className='button'>Save</button>
+            
+            <textarea type="text" ref={inputRef} onChange={(e) => setNote(e.target.value)}/>
+            <div>
+                <button type='submit' className='button'>Save</button>
+            </div>
+            
         </form>
     </section>
   )
