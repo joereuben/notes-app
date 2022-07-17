@@ -10,3 +10,4 @@ This modification uses a text area instead of an input of type 'text'
 
 # Delete Icon
 This modification replaces the delete button with an icon
+There's also a search UI to enable you search for notes to view or delete
