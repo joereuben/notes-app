@@ -27,7 +27,7 @@ export default function NoteArea({createNote}) {
             </div>
             
             <div>
-                <button type='submit' className='button'>Save</button>
+                <button type='submit' className='button' title='Save'>Save</button>
             </div>
             
         </form>

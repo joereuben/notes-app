@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import { AiFillDelete } from "react-icons/ai";
 
 export default function Note({note, deleteNote}) {
 
@@ -22,7 +23,9 @@ export default function Note({note, deleteNote}) {
         
       </div>
       <div className='delete_box'>
-        <button type='button' className='delete_btn button' onClick={()=> deleteNote(id)}>Delete</button>
+        <button type='button' className='delete_icon' onClick={()=> deleteNote(id)} title="Delete">
+            <AiFillDelete />
+        </button>
       </div>
     </div>
   )
