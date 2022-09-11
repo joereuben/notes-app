@@ -37,7 +37,7 @@ export default function Search({notes, deleteNote}) {
         <h4>Search Notes</h4>
         <div>
             <form action='' method='get' onSubmit={handleSubmit}>
-                <input type="text" value={query}  onChange={(e) => setQuery(e.target.value)}/>
+                <input type="search" value={query}  onChange={(e) => setQuery(e.target.value)}/>
                 <button type='submit' className='button'>Search</button>
             </form>
         </div>
