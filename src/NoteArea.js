@@ -23,7 +23,7 @@ export default function NoteArea({createNote}) {
         <form action='' method='get' onSubmit={handleSubmit}>
             <div className='grow-wrap'>
                 <textarea type="text" ref={inputRef} onChange={(e) => setNote(e.target.value)}
-                onInput={onInput}/>
+                onInput={onInput} placeholder="Type a note"/>
             </div>
             
             <div>
